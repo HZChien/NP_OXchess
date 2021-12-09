@@ -28,8 +28,7 @@ int find_fd(char *name);
 int win_dis[8][3] = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}};
 void gameover(int sender, int targetfd);
 
-void message_handler(char *mes, int sender)
-{
+void message_handler(char *mes, int sender){
     int instruction = 0;
     sscanf (mes,"%d",&instruction);
     switch (instruction) {
@@ -205,10 +204,9 @@ void message_handler(char *mes, int sender)
 
 }
 
-void *pthread_service(void* sfd)    {
+void *pthread_service(void* sfd){
     int fd=*(int *)sfd;
-    while(1)
-    {
+    while(1){
         int numbytes;
         int i;
         numbytes=recv(fd,mes,MAXSIZE,0);

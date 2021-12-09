@@ -1,3 +1,4 @@
+github: https://github.com/HZChien/NP_OXchess
 1.	
 	輸入make以編譯
 2.
