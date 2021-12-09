@@ -197,7 +197,7 @@ int main(int argc, char *argv[]){
         	}else if(turn == 0){
 				printf("It's not your turn!!\n");
 				continue;
-			}else if(turn == 2){
+			}else if(turn == 2){ 
 				printf("You are not playing a game now!\n");
 				continue;
 			}

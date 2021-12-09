@@ -86,7 +86,7 @@ void message_handler(char *mes, int sender)
 			}else{
 				sprintf(buf, "4 %s want invite you. Do you accept?\n", users[sender].id);
             	users[sender].inviting = targetfd;
-				send(targetfd, buf, strlen(buf), 0);
+				send(targetfd, buf, strlen(buf), 0); 
             	printf("3 invite:%s to %s\n", users[sender].id, target);
 			}
             break;
@@ -160,7 +160,7 @@ void message_handler(char *mes, int sender)
             for (int i = 0; i < 8;i++)  {
                 if (board[win_dis[i][0]]==board[win_dis[i][1]] && board[win_dis[i][1]]==board[win_dis[i][2]]) {
                     if (board[win_dis[i][0]]!='*') {
-                    strcat(state, "_Win!/////////////////\n");
+                    strcat(state, "_Win!!!!!!!\n");
                     sprintf (buf,"8 2 %c %c %c %c %c %c %c %c %c %s\n",board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7],board[8],state);
                     printf ("7:%s",buf);
                     send(sender,buf,sizeof(buf),0);
